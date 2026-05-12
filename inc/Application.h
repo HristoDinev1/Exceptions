@@ -2,8 +2,6 @@
 #include "BankSystem.h"
 #include "Menu.h"
 
-// Singleton — central application coordinator.
-// This is the place where students will add the central try/catch later.
 class Application {
 private:
     BankSystem bank;

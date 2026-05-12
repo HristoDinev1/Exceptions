@@ -11,13 +11,11 @@ double Statistics::totalMoney(const BankSystem& bank) {
 }
 
 double Statistics::averageBalance(const BankSystem& bank) {
-    // No empty-check: division by zero if there are no accounts.
     return totalMoney(bank) / static_cast<double>(bank.getAccountCount());
 }
 
 Account Statistics::richestAccount(const BankSystem& bank) {
     const MyVector<Account>& accounts = bank.getAccounts();
-    // Trusts that the bank has at least one account.
     std::size_t richestIdx = 0;
     for (std::size_t i = 1; i < accounts.size(); ++i) {
         if (accounts[i].getBalance() > accounts[richestIdx].getBalance()) {

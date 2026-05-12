@@ -20,7 +20,6 @@ public:
     bool empty() const;
     const char* c_str() const;
 
-    // No bounds check.
     char& operator[](std::size_t index);
     const char& operator[](std::size_t index) const;
 

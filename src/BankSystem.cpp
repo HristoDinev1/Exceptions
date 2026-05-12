@@ -36,7 +36,7 @@ int BankSystem::findAccountIndex(int accountId) const {
 
 Account& BankSystem::findAccount(int accountId) {
     int idx = findAccountIndex(accountId);
-    return accounts[idx];   // no check for -1
+    return accounts[idx];
 }
 
 const Account& BankSystem::findAccount(int accountId) const {

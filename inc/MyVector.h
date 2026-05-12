@@ -1,8 +1,6 @@
 #pragma once
 #include <cstddef>
 
-// Student-style dynamic array.
-// Intentionally without bounds checks, capacity checks, etc.
 template <typename T>
 class MyVector {
 private:
@@ -61,16 +59,13 @@ public:
         data[size_++] = value;
     }
 
-    // No empty-check.
     void pop_back() {
         --size_;
     }
 
-    // No bounds checks.
     T& operator[](std::size_t index)             { return data[index]; }
     const T& operator[](std::size_t index) const { return data[index]; }
 
-    // Same as operator[] for now; students will turn this into a checked version.
     T& at(std::size_t index)             { return data[index]; }
     const T& at(std::size_t index) const { return data[index]; }
 
@@ -78,7 +73,6 @@ public:
     std::size_t capacity() const { return capacity_; }
     bool empty()           const { return size_ == 0; }
 
-    // No overflow / length check on requested size.
     void reserve(std::size_t newCapacity) {
         if (newCapacity <= capacity_) return;
         T* newData = new T[newCapacity];

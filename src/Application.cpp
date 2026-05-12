@@ -9,7 +9,5 @@ Application& Application::getInstance() {
 }
 
 void Application::run() {
-    // Currently no try/catch on purpose — this is where students will add the
-    // central exception-handling boundary later.
     menu.run();
 }

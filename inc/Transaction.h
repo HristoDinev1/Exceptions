@@ -12,7 +12,7 @@ class Transaction {
 private:
     TransactionType type;
     double amount;
-    int otherAccountId;   // -1 if not a transfer
+    int otherAccountId;
 
 public:
     Transaction();

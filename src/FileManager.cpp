@@ -3,12 +3,6 @@
 #include <fstream>
 #include <string>
 
-// File format (very simple):
-//   <number_of_accounts>
-//   <id>
-//   <owner_name>     (single word)
-//   <balance>
-//   ...
 void FileManager::save(const BankSystem& bank, const MyString& filename) {
     std::ofstream out(filename.c_str());
     const MyVector<Account>& accounts = bank.getAccounts();
