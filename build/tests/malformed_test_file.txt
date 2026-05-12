@@ -1,2 +1,0 @@
-not a number
-random garbage on the next line

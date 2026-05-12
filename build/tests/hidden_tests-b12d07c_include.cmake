@@ -1,5 +1,0 @@
-if(EXISTS "C:/Users/icodi/Desktop/asdasdasdasdasdasdas/Exceptions/build/tests/hidden_tests-b12d07c_tests.cmake")
-  include("C:/Users/icodi/Desktop/asdasdasdasdasdasdas/Exceptions/build/tests/hidden_tests-b12d07c_tests.cmake")
-else()
-  add_test(hidden_tests_NOT_BUILT-b12d07c hidden_tests_NOT_BUILT-b12d07c)
-endif()
