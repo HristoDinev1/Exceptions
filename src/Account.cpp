@@ -1,39 +1,47 @@
 #include "Account.h"
+#include <iostream>
 
-namespace banking
-{
-    Account::Account()
-        : id(0), balance(0)
-    {
-    }
+Account::Account()
+    : id(0), ownerName(""), balance(0.0) {}
 
-    Account::Account(int id, const std::string& owner, double balance)
-        : id(id), owner(owner), balance(balance)
-    {
-    }
+Account::Account(int id, const MyString& ownerName, double initialBalance)
+    : id(id), ownerName(ownerName), balance(initialBalance) {}
 
-    int Account::getId() const
-    {
-        return id;
-    }
+int             Account::getId()        const { return id; }
+const MyString& Account::getOwnerName() const { return ownerName; }
+double          Account::getBalance()   const { return balance; }
+const MyVector<Transaction>& Account::getHistory() const { return history; }
 
-    const std::string& Account::getOwner() const
-    {
-        return owner;
-    }
+void Account::deposit(double amount) {
+    balance += amount;
+    history.push_back(Transaction(TransactionType::Deposit, amount));
+}
 
-    double Account::getBalance() const
-    {
-        return balance;
-    }
+void Account::withdraw(double amount) {
+    balance -= amount;
+    history.push_back(Transaction(TransactionType::Withdraw, amount));
+}
 
-    void Account::deposit(double amount)
-    {
+void Account::recordTransfer(double amount, int otherAccountId, bool incoming) {
+    if (incoming) {
         balance += amount;
-    }
-
-    void Account::withdraw(double amount)
-    {
+        history.push_back(Transaction(TransactionType::TransferIn,  amount, otherAccountId));
+    } else {
         balance -= amount;
+        history.push_back(Transaction(TransactionType::TransferOut, amount, otherAccountId));
+    }
+}
+
+void Account::printSummary() const {
+    std::cout << "Account #" << id
+              << " | Owner: " << ownerName
+              << " | Balance: " << balance << '\n';
+}
+
+void Account::printHistory() const {
+    std::cout << "History for account #" << id << ":\n";
+    for (std::size_t i = 0; i < history.size(); ++i) {
+        std::cout << "  ";
+        history[i].print();
     }
 }

@@ -1,6 +1,6 @@
-^C:\USERS\ICODI\DESKTOP\AASDASDAS\OBJECT-ORIENTED-PROGRAMMING\EXCEPTIONEXERCISE\VER2\BUILD\CMAKEFILES\1D1DB3C07418E8C2EE70BBF716D6A58F\GENERATE.STAMP.RULE
+^C:\USERS\ICODI\DESKTOP\ASDASDASDASDASDASDAS\EXCEPTIONS\BUILD\CMAKEFILES\57210E693DFA760FF80EF8C9A7C5BACA\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/icodi/Desktop/aasdasdas/Object-Oriented-Programming/ExceptionExercise/ver2 -BC:/Users/icodi/Desktop/aasdasdas/Object-Oriented-Programming/ExceptionExercise/ver2/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/icodi/Desktop/aasdasdas/Object-Oriented-Programming/ExceptionExercise/ver2/build/BankSystem.sln
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/icodi/Desktop/asdasdasdasdasdasdas/Exceptions -BC:/Users/icodi/Desktop/asdasdasdasdasdasdas/Exceptions/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/icodi/Desktop/asdasdasdasdasdasdas/Exceptions/build/BankingSystem.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

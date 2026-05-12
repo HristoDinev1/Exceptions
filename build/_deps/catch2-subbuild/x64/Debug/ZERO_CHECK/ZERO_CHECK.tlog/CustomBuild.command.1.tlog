@@ -1,0 +1,10 @@
+^C:\USERS\ICODI\DESKTOP\ASDASDASDASDASDASDAS\EXCEPTIONS\BUILD\_DEPS\CATCH2-SUBBUILD\CMAKEFILES\27EEBA4247AC29E18C2C0A232C88AEFA\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/icodi/Desktop/asdasdasdasdasdasdas/Exceptions/build/_deps/catch2-subbuild -BC:/Users/icodi/Desktop/asdasdasdasdasdasdas/Exceptions/build/_deps/catch2-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/icodi/Desktop/asdasdasdasdasdasdas/Exceptions/build/_deps/catch2-subbuild/catch2-populate.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

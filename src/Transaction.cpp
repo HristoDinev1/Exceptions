@@ -1,19 +1,30 @@
 #include "Transaction.h"
+#include <iostream>
 
-namespace banking
-{
-    Transaction::Transaction()
-        : type(TransactionType::Deposit), amount(0)
-    {
-    }
+Transaction::Transaction()
+    : type(TransactionType::Deposit), amount(0.0), otherAccountId(-1) {}
 
-    Transaction::Transaction(TransactionType type, double amount, const std::string& description)
-        : type(type), amount(amount), description(description)
-    {
-    }
+Transaction::Transaction(TransactionType type, double amount, int otherAccountId)
+    : type(type), amount(amount), otherAccountId(otherAccountId) {}
 
-    double Transaction::getAmount() const
-    {
-        return amount;
+TransactionType Transaction::getType()   const { return type; }
+double          Transaction::getAmount() const { return amount; }
+int             Transaction::getOtherAccountId() const { return otherAccountId; }
+
+MyString Transaction::typeAsString() const {
+    switch (type) {
+        case TransactionType::Deposit:     return MyString("Deposit");
+        case TransactionType::Withdraw:    return MyString("Withdraw");
+        case TransactionType::TransferIn:  return MyString("TransferIn");
+        case TransactionType::TransferOut: return MyString("TransferOut");
     }
+    return MyString("Unknown");
+}
+
+void Transaction::print() const {
+    std::cout << typeAsString() << " " << amount;
+    if (otherAccountId != -1) {
+        std::cout << " (acc " << otherAccountId << ")";
+    }
+    std::cout << '\n';
 }

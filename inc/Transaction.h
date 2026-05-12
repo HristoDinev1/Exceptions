@@ -1,26 +1,28 @@
 #pragma once
-#include <string>
+#include "MyString.h"
 
-namespace banking
-{
-    enum class TransactionType
-    {
-        Deposit,
-        Withdraw,
-        Transfer
-    };
+enum class TransactionType {
+    Deposit,
+    Withdraw,
+    TransferIn,
+    TransferOut
+};
 
-    class Transaction
-    {
-    private:
-        TransactionType type;
-        double amount;
-        std::string description;
+class Transaction {
+private:
+    TransactionType type;
+    double amount;
+    int otherAccountId;   // -1 if not a transfer
 
-    public:
-        Transaction();
-        Transaction(TransactionType type, double amount, const std::string& description);
+public:
+    Transaction();
+    Transaction(TransactionType type, double amount, int otherAccountId = -1);
 
-        double getAmount() const;
-    };
-}
+    TransactionType getType() const;
+    double getAmount() const;
+    int getOtherAccountId() const;
+
+    MyString typeAsString() const;
+
+    void print() const;
+};

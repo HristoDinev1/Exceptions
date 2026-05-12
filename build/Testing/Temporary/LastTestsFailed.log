@@ -1,0 +1,20 @@
+12:MyVector::at on out-of-range index throws std::out_of_range
+13:MyVector::pop_back on empty vector throws std::underflow_error
+14:MyVector::reserve with absurd size throws std::length_error
+15:MyString out-of-range access throws std::out_of_range
+16:Negative deposit throws std::invalid_argument
+17:Negative withdraw throws std::invalid_argument
+18:Withdraw more than balance throws std::underflow_error
+19:Duplicate account ID throws std::invalid_argument
+20:Finding a non-existing account throws std::out_of_range
+21:Transfer to non-existing account throws std::out_of_range
+22:Transfer to the same account throws std::logic_error
+23:Negative transfer amount throws std::invalid_argument
+24:Negative initial balance throws std::invalid_argument
+25:Non-positive account ID throws std::invalid_argument
+26:Empty owner name throws std::invalid_argument
+27:Deposit causing overflow throws std::overflow_error
+28:Average balance on empty bank throws std::logic_error
+29:Richest account on empty bank throws std::logic_error
+30:Loading a non-existing file throws std::runtime_error
+31:Loading a malformed file throws std::runtime_error

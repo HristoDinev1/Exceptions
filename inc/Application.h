@@ -1,20 +1,20 @@
 #pragma once
+#include "BankSystem.h"
 #include "Menu.h"
 
-namespace banking
-{
-    class Application
-    {
-    private:
-        static Application* instance;
+// Singleton — central application coordinator.
+// This is the place where students will add the central try/catch later.
+class Application {
+private:
+    BankSystem bank;
+    Menu       menu;
 
-        BankSystem bank;
-        Menu menu;
+    Application();
 
-        Application();
+public:
+    Application(const Application&)            = delete;
+    Application& operator=(const Application&) = delete;
 
-    public:
-        static Application& getInstance();
-        void run();
-    };
-}
+    static Application& getInstance();
+    void run();
+};

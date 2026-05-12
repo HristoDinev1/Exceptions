@@ -1,26 +1,15 @@
 #include "Application.h"
 
-namespace banking
-{
-    Application* Application::instance = nullptr;
+Application::Application()
+    : bank(), menu(bank) {}
 
-    Application::Application()
-        : menu(bank)
-    {
-    }
+Application& Application::getInstance() {
+    static Application instance;
+    return instance;
+}
 
-    Application& Application::getInstance()
-    {
-        if (!instance)
-        {
-            instance = new Application();
-        }
-
-        return *instance;
-    }
-
-    void Application::run()
-    {
-        menu.run();
-    }
+void Application::run() {
+    // Currently no try/catch on purpose — this is where students will add the
+    // central exception-handling boundary later.
+    menu.run();
 }

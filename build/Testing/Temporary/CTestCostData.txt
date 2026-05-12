@@ -1,0 +1,52 @@
+Create account and check balance 2 0.00476595
+Deposit increases balance 2 0.00450415
+Withdraw decreases balance 2 0.0045511
+Transfer moves money between accounts 2 0.00482065
+Transaction history is recorded 2 0.00440025
+MyVector basic operations 2 0.0044944
+MyVector grows beyond initial capacity 2 0.00427015
+MyString basic operations 2 0.00441465
+Statistics work for a non-empty bank 2 0.0044078
+Sort by balance ascending 2 0.00465075
+Sort by id ascending 2 0.00465175
+MyVector::at on out-of-range index throws std::out_of_range 0 0
+MyVector::pop_back on empty vector throws std::underflow_error 0 0
+MyVector::reserve with absurd size throws std::length_error 0 0
+MyString out-of-range access throws std::out_of_range 0 0
+Negative deposit throws std::invalid_argument 0 0
+Negative withdraw throws std::invalid_argument 0 0
+Withdraw more than balance throws std::underflow_error 0 0
+Duplicate account ID throws std::invalid_argument 0 0
+Finding a non-existing account throws std::out_of_range 0 0
+Transfer to non-existing account throws std::out_of_range 0 0
+Transfer to the same account throws std::logic_error 0 0
+Negative transfer amount throws std::invalid_argument 0 0
+Negative initial balance throws std::invalid_argument 0 0
+Non-positive account ID throws std::invalid_argument 0 0
+Empty owner name throws std::invalid_argument 0 0
+Deposit causing overflow throws std::overflow_error 0 0
+Average balance on empty bank throws std::logic_error 0 0
+Richest account on empty bank throws std::logic_error 0 0
+Loading a non-existing file throws std::runtime_error 0 0
+Loading a malformed file throws std::runtime_error 0 0
+---
+MyVector::at on out-of-range index throws std::out_of_range
+MyVector::pop_back on empty vector throws std::underflow_error
+MyVector::reserve with absurd size throws std::length_error
+MyString out-of-range access throws std::out_of_range
+Negative deposit throws std::invalid_argument
+Negative withdraw throws std::invalid_argument
+Withdraw more than balance throws std::underflow_error
+Duplicate account ID throws std::invalid_argument
+Finding a non-existing account throws std::out_of_range
+Transfer to non-existing account throws std::out_of_range
+Transfer to the same account throws std::logic_error
+Negative transfer amount throws std::invalid_argument
+Negative initial balance throws std::invalid_argument
+Non-positive account ID throws std::invalid_argument
+Empty owner name throws std::invalid_argument
+Deposit causing overflow throws std::overflow_error
+Average balance on empty bank throws std::logic_error
+Richest account on empty bank throws std::logic_error
+Loading a non-existing file throws std::runtime_error
+Loading a malformed file throws std::runtime_error

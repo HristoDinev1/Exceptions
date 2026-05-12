@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\icodi\Desktop\asdasdasdasdasdasdas\Exceptions\build\_deps\catch2-subbuild\CMakeFiles\28d74b3499eb33df493fb6716efb9417\catch2-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\icodi\Desktop\asdasdasdasdasdasdas\Exceptions\build\_deps\catch2-subbuild\CMakeFiles\28d74b3499eb33df493fb6716efb9417\catch2-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\icodi\Desktop\asdasdasdasdasdasdas\Exceptions\build\_deps\catch2-subbuild\CMakeFiles\28d74b3499eb33df493fb6716efb9417\catch2-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\icodi\Desktop\asdasdasdasdasdasdas\Exceptions\build\_deps\catch2-subbuild\CMakeFiles\28d74b3499eb33df493fb6716efb9417\catch2-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\icodi\Desktop\asdasdasdasdasdasdas\Exceptions\build\_deps\catch2-subbuild\CMakeFiles\28d74b3499eb33df493fb6716efb9417\catch2-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\icodi\Desktop\asdasdasdasdasdasdas\Exceptions\build\_deps\catch2-subbuild\CMakeFiles\28d74b3499eb33df493fb6716efb9417\catch2-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\icodi\Desktop\asdasdasdasdasdasdas\Exceptions\build\_deps\catch2-subbuild\CMakeFiles\28d74b3499eb33df493fb6716efb9417\catch2-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\icodi\Desktop\asdasdasdasdasdasdas\Exceptions\build\_deps\catch2-subbuild\CMakeFiles\28d74b3499eb33df493fb6716efb9417\catch2-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\icodi\Desktop\asdasdasdasdasdasdas\Exceptions\build\_deps\catch2-subbuild\CMakeFiles\5640a68b9c8052f7fbeebc00be89b6f2\catch2-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\icodi\Desktop\asdasdasdasdasdasdas\Exceptions\build\_deps\catch2-subbuild\CMakeFiles\27eeba4247ac29e18c2c0a232c88aefa\catch2-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\icodi\Desktop\asdasdasdasdasdasdas\Exceptions\build\_deps\catch2-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\icodi\Desktop\asdasdasdasdasdasdas\Exceptions\build\_deps\catch2-subbuild\CMakeFiles\catch2-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3A91B4F8-A654-3C8D-A364-60FC72CEB0AB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

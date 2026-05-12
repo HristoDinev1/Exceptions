@@ -1,27 +1,28 @@
 #pragma once
-#include <string>
+#include "MyString.h"
 #include "MyVector.h"
 #include "Transaction.h"
 
-namespace banking
-{
-    class Account
-    {
-    private:
-        int id;
-        std::string owner;
-        double balance;
-        MyVector<Transaction> history;
+class Account {
+private:
+    int id;
+    MyString ownerName;
+    double balance;
+    MyVector<Transaction> history;
 
-    public:
-        Account();
-        Account(int id, const std::string& owner, double balance);
+public:
+    Account();
+    Account(int id, const MyString& ownerName, double initialBalance = 0.0);
 
-        int getId() const;
-        const std::string& getOwner() const;
-        double getBalance() const;
+    int             getId()        const;
+    const MyString& getOwnerName() const;
+    double          getBalance()   const;
+    const MyVector<Transaction>& getHistory() const;
 
-        void deposit(double amount);
-        void withdraw(double amount);
-    };
-}
+    void deposit(double amount);
+    void withdraw(double amount);
+    void recordTransfer(double amount, int otherAccountId, bool incoming);
+
+    void printSummary() const;
+    void printHistory() const;
+};

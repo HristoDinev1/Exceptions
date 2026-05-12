@@ -1,9 +1,6 @@
 #include "Application.h"
 
-using namespace banking;
-
-int main()
-{
+int main() {
     Application::getInstance().run();
     return 0;
 }

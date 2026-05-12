@@ -1,15 +1,23 @@
 #pragma once
 #include "BankSystem.h"
 
-namespace banking
-{
-    class Menu
-    {
-    private:
-        BankSystem& bank;
+class Menu {
+private:
+    BankSystem& bank;
 
-    public:
-        Menu(BankSystem& bank);
-        void run();
-    };
-}
+    void showMainMenu();
+    void handleCreateAccount();
+    void handleDeposit();
+    void handleWithdraw();
+    void handleTransfer();
+    void handleFindAccount();
+    void handlePrintAll();
+    void handleSort();
+    void handleStatistics();
+    void handleSaveLoad();
+
+public:
+    Menu(BankSystem& bank);
+
+    void run();
+};
