@@ -2,13 +2,13 @@
 
 **Step 1: Clone repo**
 ```bash
-git clone <repo-url>
-cd BankingSystem
+git clone https://github.com/HristoDinev1/Exceptions/
+cd Exceptions
 ```
 
 **Step 2: Create branch**
 ```bash
-git checkout -b fix-exceptions
+git checkout -b ИметоНаВашиятBranch
 ```
 
 **Step 3: Преработвате кода**
@@ -16,8 +16,8 @@ git checkout -b fix-exceptions
 **Step 4: Push**
 ```bash
 git add .
-git commit -m "exceptions"
-git push origin fix-exceptions
+git commit -m "СъобщениеНаКомита"
+git push origin ИметоНаВашиятBranch
 ```
 
 **Step 5: Check GitHub Actions** - вижте резултатите на вашия branch
@@ -26,7 +26,7 @@ git push origin fix-exceptions
 
 ## Optional: Test локално преди push
 
-**Linux / macOS:**
+**Linux / macOS:** - (нямам мак не съм тествал)
 ```bash
 cmake -S . -B build
 cmake --build build
