@@ -1,6 +1,7 @@
 #include "FileManager.h"
 
 #include <fstream>
+#include <stdexcept>
 #include <string>
 
 void FileManager::save(const BankSystem& bank, const MyString& filename) {
@@ -17,13 +18,17 @@ void FileManager::save(const BankSystem& bank, const MyString& filename) {
 
 void FileManager::load(BankSystem& bank, const MyString& filename) {
     std::ifstream in(filename.c_str());
+    if (!in)
+        throw std::runtime_error("FileManager::load: cannot open file");
     std::size_t count = 0;
-    in >> count;
+    if (!(in >> count))
+        throw std::runtime_error("FileManager::load: malformed file");
     for (std::size_t i = 0; i < count; ++i) {
         int         id      = 0;
         std::string owner;
         double      balance = 0.0;
-        in >> id >> owner >> balance;
+        if (!(in >> id >> owner >> balance))
+            throw std::runtime_error("FileManager::load: malformed file");
         bank.createAccount(id, MyString(owner.c_str()), balance);
     }
 }

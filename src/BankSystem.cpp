@@ -1,9 +1,18 @@
 #include "BankSystem.h"
 #include <iostream>
+#include <stdexcept>
 
 BankSystem::BankSystem() {}
 
 void BankSystem::createAccount(int id, const MyString& ownerName, double initialBalance) {
+    if (id <= 0)
+        throw std::invalid_argument("createAccount: id must be positive");
+    if (ownerName.empty())
+        throw std::invalid_argument("createAccount: owner name must not be empty");
+    if (initialBalance < 0)
+        throw std::invalid_argument("createAccount: initial balance must be non-negative");
+    if (findAccountIndex(id) != -1)
+        throw std::invalid_argument("createAccount: account with this id already exists");
     Account account(id, ownerName, initialBalance);
     accounts.push_back(account);
 }
@@ -19,6 +28,10 @@ void BankSystem::withdraw(int accountId, double amount) {
 }
 
 void BankSystem::transfer(int fromId, int toId, double amount) {
+    if (fromId == toId)
+        throw std::logic_error("transfer: cannot transfer to the same account");
+    if (amount < 0)
+        throw std::invalid_argument("transfer: amount must be non-negative");
     Account& from = findAccount(fromId);
     Account& to   = findAccount(toId);
     from.recordTransfer(amount, toId,   false);
@@ -36,11 +49,15 @@ int BankSystem::findAccountIndex(int accountId) const {
 
 Account& BankSystem::findAccount(int accountId) {
     int idx = findAccountIndex(accountId);
+    if (idx == -1)
+        throw std::out_of_range("findAccount: account not found");
     return accounts[idx];
 }
 
 const Account& BankSystem::findAccount(int accountId) const {
     int idx = findAccountIndex(accountId);
+    if (idx == -1)
+        throw std::out_of_range("findAccount: account not found");
     return accounts[idx];
 }
 

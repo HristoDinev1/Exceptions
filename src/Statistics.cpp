@@ -1,5 +1,6 @@
 #include "Statistics.h"
 #include <iostream>
+#include <stdexcept>
 
 double Statistics::totalMoney(const BankSystem& bank) {
     double total = 0.0;
@@ -11,10 +12,14 @@ double Statistics::totalMoney(const BankSystem& bank) {
 }
 
 double Statistics::averageBalance(const BankSystem& bank) {
+    if (bank.getAccountCount() == 0)
+        throw std::logic_error("averageBalance: bank has no accounts");
     return totalMoney(bank) / static_cast<double>(bank.getAccountCount());
 }
 
 Account Statistics::richestAccount(const BankSystem& bank) {
+    if (bank.getAccountCount() == 0)
+        throw std::logic_error("richestAccount: bank has no accounts");
     const MyVector<Account>& accounts = bank.getAccounts();
     std::size_t richestIdx = 0;
     for (std::size_t i = 1; i < accounts.size(); ++i) {

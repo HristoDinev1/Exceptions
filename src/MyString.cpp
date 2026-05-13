@@ -2,6 +2,7 @@
 
 #include <cstring>
 #include <iostream>
+#include <stdexcept>
 #include <string>
 
 MyString::MyString() : data(new char[1]), length(0) {
@@ -38,10 +39,14 @@ bool MyString::empty() const { return length == 0; }
 const char* MyString::c_str() const { return data; }
 
 char& MyString::operator[](std::size_t index) {
+    if (index >= length)
+        throw std::out_of_range("MyString::operator[]: index out of range");
     return data[index];
 }
 
 const char& MyString::operator[](std::size_t index) const {
+    if (index >= length)
+        throw std::out_of_range("MyString::operator[]: index out of range");
     return data[index];
 }
 
